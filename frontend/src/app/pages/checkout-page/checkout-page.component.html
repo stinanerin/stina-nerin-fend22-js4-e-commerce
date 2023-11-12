@@ -1,0 +1,21 @@
+<section class="checkout-wrapper">
+
+    <app-info-page *ngIf="!cart.items.length"  message="Your cart is empty" ></app-info-page>
+
+
+    <div *ngIf="cart.items.length">
+
+        <header class="page-header">
+            <h1>Cart</h1>
+            <p class="title" >{{ cart.totalItems }} items</p>
+        </header>
+
+        <ul>
+            <app-cart-item *ngFor="let item of cart.items" [cartItem]="item"></app-cart-item>
+        </ul>
+
+        <app-cart-summary [cart]="cart"></app-cart-summary>
+
+    </div> 
+
+</section>

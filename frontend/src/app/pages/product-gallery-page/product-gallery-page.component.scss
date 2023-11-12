@@ -1,0 +1,14 @@
+@import './../../../styles/variables';
+
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    p {
+        min-width: max-content;
+        span {
+            font-size: $size-heading-m;
+        }
+    }
+}
